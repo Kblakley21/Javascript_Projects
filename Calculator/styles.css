@@ -1,0 +1,67 @@
+body{ 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#calculator {
+    display: grid;
+    grid-template-areas: 
+    "screen screen screen operator"
+    "number number number operator"
+    "number number number operator"
+    "number number number operator"
+    "number number number operator";
+
+    font: Arial, Helvetica, sans-serif;
+    background-color: black;
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+#screen {
+    grid-area: screen;
+    width: 100%;
+    padding: 20px;
+    font-size: 42px;
+    text-align: left;
+    border: none;
+    background-color: grey;
+}
+
+button{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: grey;
+    border: none;
+    font-size: 42px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background-color: blue;
+}
+button:active {
+    background-color: lightblue;
+}
+
+.operator-btn{
+    background-color: orange;
+}
+.operator-btn:hover{
+    background-color: red;
+}
+.operator-btn:active {
+    background-color: purple;
+}
+
+#keys {
+    display: grid;
+    grid-area: number;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    gap: 10px;
+}
