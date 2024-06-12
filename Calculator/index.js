@@ -1,4 +1,4 @@
-const onScreen = document.getElementById('screen');
+const onScreen = document.getElementById('screen-input');
 
 
 
