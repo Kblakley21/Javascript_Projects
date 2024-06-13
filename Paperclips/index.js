@@ -3,7 +3,7 @@ let currentCash = 5.0
 let wireStock = 20;
 let outOfWire = document.getElementById('failed-to-make').innerText = 'Out of Wire!'
 let outOfCash = document.getElementById('failed-to-buy').innerHTML = "You're out of money!"
-//inital variable testing
+//initial variable testing
 console.log(currentClips)
 console.log(currentCash)
 console.log(wireStock)
@@ -13,9 +13,9 @@ console.log(outOfWire)
 //add 1 to currentClips when button onclick occurs
 function addClips() {
 
-    if (wireStock > 4) {
+    if (wireStock >= 4) {
         currentClips++;
-        document.getElementById('clip-counter').innerHTML = currentClips
+        document.getElementById('clip-counter').addEventListener('click', currentClips++, false)
         console.log(currentClips);
         wireStock -= 4
         document.getElementById('wire-stock').innerText = wireStock
@@ -27,6 +27,7 @@ function addClips() {
     }
 
     function buyWire() {
+    let test = getNumbers()
         if (currentCash >= .10) {
             wireStock++
             Math.floor(currentCash -= .10)
